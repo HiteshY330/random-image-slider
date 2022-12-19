@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .container{
+            display: grid;
+            height: 100vh;
+            width: 100%;
+            place-items: center;
+            
+        }
+        .slider1{
+            height: 550px;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+            position: absolute;
+            place-items: center;
+            display: grid;
+        }
+        .track{
+            display: flex;
+            width: calc(600px *4);
+            animation: scroll 10s linear infinite;
+        }
+        .track:hover{
+            animation-play-state: paused;
+        }
+        .slide1{
+            width: 600px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 15px;
+        }
+        .slide1:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        img{
+            width: 100%;
+        }
+        @keyframes scroll {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(calc(-250px * 2));
+            }
+        }
+        h1{
+            z-index: 1;
+            position: absolute;
+            left: 142px;
+        }
+        .heading{
+            position: absolute;
+            left:40%;
+            top:10vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Random Image Slider</h1>
+        <div class="slider1">
+            <div class="slide track">
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/221">
+                    <h1>Hill</h1>
+                </div>
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/222">
+                </div>
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/223">
+                </div>
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/224">
+                </div>
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/225">
+                </div>
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/226">
+                </div>
+                <div class="slide1">
+                    <img src="https://picsum.photos/247/227">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
